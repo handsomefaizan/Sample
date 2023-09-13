@@ -1,0 +1,194 @@
+// Question No 1 
+
+var firstName = prompt("Enter your first name")
+var lastName = prompt("Enter your last name")
+var fullName = firstName + " " + lastName
+alert("Welcome ! Mr/Mrs " + fullName)
+
+// Question No 2 
+
+var mobile = prompt("What is your favourite mobile model?")
+alert("The length of string is " + mobile.length)
+
+// Question No 3 
+
+var citizen = "Pakistani"
+console.log(`The index of 'n' in pakistani is ${citizen.indexOf('n')}`)
+
+// Question No 4 
+
+var greet = "Hello world"
+console.log("The last l index is  " + greet.lastIndexOf('l'))
+
+// Question No 5
+
+var c = "Pakistani"
+console.log(" the character at 3rd index of pakistani is: " + c[3])
+
+// Question No 6 
+
+alert(firstName.concat(" ", lastName))
+
+// Question No 7 
+
+var city = "I want to go to Hyderabad"
+
+for (var i = 0; i < city.length; i++) {
+    var extract = city.slice(i, i + 5)
+    if (extract === "Hyder") {
+        city = city.slice(0, i) + "Islam" + city.slice(i + 5)
+    }
+}
+console.log(city)
+
+//or
+
+city.replace("Hyder,Islam")
+
+// Question No 8 
+
+var message = 'Ali and Sami are best friends. They play cricket and football together.';
+for (var i = 0; i < city.length; i++) {
+    var extract = city.slice(i, i + 3)
+    if (extract === "and") {
+        message = message.slice(0, i) + "&" + city.slice(i + 3)
+    }
+}
+console.log(message)
+//or
+
+console.log(message.replace("and", "&"))
+
+// Question No 9 
+
+// convert number to string
+var num = 427
+console.log(" type of 427 is " + typeof num.toString())
+// convert string to number
+var str = "427"
+str = Number.parseInt(str)
+console.log("type of 427 is now " + typeof str)
+
+// Question No 10 
+
+var url = prompt("Enter URL")
+console.log("URL: " + url)
+console.log("domain :" + url.slice(4))
+
+// Question No 11 
+
+var dryF = prompt("Enter any fruit name in small letters")
+alert("Here you go " + dryF.toUpperCase())
+
+// Question No 12 
+
+var net = prompt("Enter any netwrok name in capital letters")
+alert("Here you go " + net.toLowerCase())
+
+// Question No 13 
+
+var js = "javascript"
+var title = js[0].toUpperCase() + js.slice(1)
+alert("Title case of js : " + title)
+
+// Question No 14
+
+var n = 35.36
+var r = n.toString().replace(".", "")
+console.log(`type of '35.36' is now : ${typeof r} `)
+console.log("result :" + r)
+
+// Question No 15 & 16
+
+var a = "3"
+var b = "3"
+var x = a + b
+var y = a - b
+console.log("x=a+b: " + x)
+console.log("y=a+b: " + y)
+
+
+// Question No 17 
+
+
+var userName = prompt("Enter your Input: ");
+checkValidName(userName);
+function checkValidName(un) {
+    var message;
+    var split = [];
+    var arr = [];
+    for (var i = 0; i < un.length; i++) {
+        split[i] = un.split("&nbsp;");
+        arr[i] = un.charCodeAt(i);
+        if (arr[i] != 33 || arr[i] != 44 || arr[i] != 46 || arr[i] != 64) {
+            message = "Correct User Name";
+        }
+        while (arr[i] == 33 || arr[i] == 44 || arr[i] == 46 || arr[i] == 64) {
+            alert("please enter a valid userName");
+            userName = prompt("Enter your Input: ");
+            split[i] = un.split("&nbsp;");
+            arr[i] = un.charCodeAt(i);
+            if (arr[i] != 33 || arr[i] != 44 || arr[i] != 46 || arr[i] != 64) {
+                message = "correct in";
+                break;
+            }
+        }
+
+    }
+    alert(message);
+}
+
+
+// Question No 18 
+
+var A = ['cake', 'apple pie', 'cookie', 'chips', 'patties']
+var bake = prompt('Enter the item you want')
+
+for (var i = 0; i < A.length; i++) {
+    if (A[i] === bake.toLowerCase()) {
+        alert(`yes we have ${A[i]} at index ${i}`)
+        break
+    }
+    else {
+        alert(`Sorry! we dont have ${bake}`)
+        break
+    }
+
+}
+//  Question No 19
+
+var userInput = prompt("Enter any thing")
+var userInputTwo = prompt("Enter any other thing")
+
+if (userInput > userInputTwo) {
+    alert(`${userInput} is greater than ${userInputTwo}`)
+}
+else if (userInput < userInputTwo) {
+    alert(`${userInputTwo} is greater than ${userInput}`)
+}
+else if (userInput === userInputTwo) {
+    alert(`${userInputTwo} is equal ${userInput}`)
+}
+else {
+    alert("invalid")
+}
+
+
+// Question No 20 
+
+var password = prompt("create password")
+
+
+if (!/[a-zA-Z]/.test(password) || !/[0-9]/.test(password)) {
+    alert("enter Alphabets and number to create password")
+}
+if (/^[0-9]/.test(password)) {
+    alert("please start with alphabetical letters")
+}
+if (password.length < 6) {
+    alert("create password atleat of 6 letters")
+}
+else {
+    alert("password is created")
+}
+
