@@ -1,0 +1,201 @@
+// Question No 1 
+
+
+function toss () {
+    console.log("Aah... Today we are in Srilanka, Aao Toss kare!");
+var toss = Math.round(Math.random());
+if(toss == 0){
+ console.log("Pakistan won the toss");
+}
+else {
+ console.log("India won the toss")
+}
+
+
+
+// Question No 2
+function dateAndTime(){
+    var day = new Date()
+    console.log(day)
+}
+console.log(dateAndTime())
+
+// Question No 3
+
+function name(){
+    var firstName = prompt("Enter your first name")
+    var lastName = prompt("Enter your last name")
+    console.log("Welcome Mr " + firstName+ " " + lastName)
+}
+alert(name())
+// Question No 4
+
+function sum(){
+    var a = +prompt("Enter the first number")
+    var b = +prompt("Enter the second number")
+return a+b
+}
+alert(sum())
+
+
+// Question No 5
+
+function calculator(){
+    var num1 =+prompt("Enter the first number")
+    var num2 =+prompt("Enter the second number")
+    var op = prompt("enter the operator")
+  switch(op){
+    case '+': return num1 + num2
+    case '-': return num1 - num2
+    case '*': return num1 * num2
+    case '/': return num1 / num2
+    case '%': return num1 % num2
+    default : return "invalid"
+    
+  }
+}
+alert(calculator())
+
+// Question No 6
+
+function sq(x){
+return x*x
+}
+console.log(sq())
+
+// Question No 7
+
+var ary = [2,4,7,3,8,90,6,45]
+function fact(a,b){
+return a*b
+}
+console.log(fact(ary[0],ary[1]))
+
+// Question No 8
+var num1 = prompt("Enter the start number")
+var num2 = prompt("Enter the end number")
+function count(a,b){
+     for(var i =a ; i < = b; i++){
+        console.log(i)
+
+     }
+}
+console.log(count(num1,num2))
+
+// Question No 9
+function sq(x){
+    return x*x
+}
+var base = +prompt("Enter the base")
+var per = +prompt("Enter perpendicular")
+function tri(a,b){
+  return sq(a) + sq(b)
+
+}
+console.log("Hypotenuse2 = " + tri(base,per))
+
+// Question No 10
+
+
+var arr = ['Snacks','Vegetables','Fruits','Sweet','Drink']
+function length(x){
+ return x.length
+}
+console.log(length(arr))
+
+
+// Question No 11
+
+num = [1,5,20,78,9,96,45,65]
+
+function large(c){
+    var largestNum = 0
+for(var i=0;i<c.length;i++)
+if(largestNum < c[i]){
+    largestNum = c[i]
+    
+}
+return largestNum
+}
+console.log("The largest number is " + large(num))
+
+// Question No 12
+
+function area(width,height){
+ return width*height
+}
+
+console.log( "The area of rectangle is "+area(12,6))
+
+
+// Question No 13
+ar = ['Sohail', 'Iqbal','Ali','Hamza','Ajmal','Shoaib','Haider','Mustafa']
+function sortedArr(a){
+return a.sort()
+}
+console.log(sortedArr(ar))
+
+// Question No 14
+
+var num = [16,55,70,76,3,45,65,89,92,]
+function psum(a){
+ var plus = 0
+for(var i=0;i<a.length;i++){
+    plus += a[i]
+}
+return plus
+}
+console.log(psum(num))
+
+// Question No 15
+
+// Question No 16
+var pwr = "Enter the power of a number"
+var n= prompt("Enter the number")
+function power(p){
+  return p*p*p
+}
+console.log("3 power of " + n + " is " + power(n))
+
+// Question No 17
+
+var move = true
+function dice(){
+   return Math.round(Math.random()*6)
+}
+console.log(dice())
+
+// Question No 18
+
+function reverseNumber(a){
+return a.reverse()
+}
+
+var num = [1,2,3,4,5,6,7,8,9,10]
+console.log(reverseNumber(num))
+
+// Question No 19
+var thing = prompt("Enter anything to check it is palindrome or not")
+function palidromeChecker(word){
+    if(word === word.split('').reverse().join('')){
+        console.log("It is palindrome")
+    }
+    else{
+        console.log("It is not palindrome")
+    }
+}
+console.log( palidromeChecker(thing))
+
+// Question No 20
+
+// function UpperCaseString(a){
+    var a = "my name is Muhammad Faizan"
+     var sp = a.split(' ')
+     for(var i=0;i<sp.length;i++){
+        sp[i]=sp[i][0].toUpperCase() + sp[i].slice(1)
+     }
+   
+    console.log(sp.join(" "))
+    
+     
+           
